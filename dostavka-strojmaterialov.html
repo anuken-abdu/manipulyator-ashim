@@ -144,7 +144,7 @@ h1,h2,h3,.disp{font-family:'Oswald',sans-serif;font-weight:700;text-transform:up
 @media(min-width:860px){.geo{grid-template-columns:1.1fr .9fr;gap:44px}}
 .geo-cities{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 .city{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.03em;font-size:14px;color:var(--text);border:1px solid var(--line2);padding:8px 14px}
-.geo-box{background:var(--surf);border:1px solid var(--line);border-left:4px solid var(--red);padding:30px}
+.geo-box{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--red);padding:30px}
 .grid-portfolio{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 @media(min-width:768px){.grid-portfolio{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .grid-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
@@ -202,6 +202,7 @@ h1,h2,h3,.disp{font-family:'Oswald',sans-serif;font-weight:700;text-transform:up
 .fab{width:52px;height:52px;display:flex;align-items:center;justify-content:center;border:0;cursor:pointer;box-shadow:0 8px 22px rgba(0,0,0,.5);transition:transform .18s,opacity .25s}
 .fab:hover{transform:translateY(-2px)}
 .fab-wa{background:var(--red)}
+.fab-back{background:var(--surf2);border:1px solid var(--line2)}
 .fab-up{background:var(--surf2);border:1px solid var(--line2);opacity:0;pointer-events:none}
 </style>
 </head>
@@ -262,14 +263,6 @@ h1,h2,h3,.disp{font-family:'Oswald',sans-serif;font-weight:700;text-transform:up
 
 <section class="sec">
   <div class="wrap">
-    <div class="eyebrow">Примеры работ</div>
-    <h2 class="h2 h2-bar" style="margin-bottom:30px">Доставка стройматериалов</h2>
-    <div class="grid-gallery"><div class="ph r43"><span class="lbl">dostavka-strojmaterialov-1.webp</span><img src="images/dostavka-strojmaterialov-1.webp" alt="Доставка стройматериалов в Алматы — фото 1" loading="lazy" onerror="this.remove()"></div><div class="ph r43"><span class="lbl">dostavka-strojmaterialov-2.webp</span><img src="images/dostavka-strojmaterialov-2.webp" alt="Доставка стройматериалов в Алматы — фото 2" loading="lazy" onerror="this.remove()"></div><div class="ph r43"><span class="lbl">dostavka-strojmaterialov-3.webp</span><img src="images/dostavka-strojmaterialov-3.webp" alt="Доставка стройматериалов в Алматы — фото 3" loading="lazy" onerror="this.remove()"></div><div class="ph r43"><span class="lbl">dostavka-strojmaterialov-4.webp</span><img src="images/dostavka-strojmaterialov-4.webp" alt="Доставка стройматериалов в Алматы — фото 4" loading="lazy" onerror="this.remove()"></div></div>
-  </div>
-</section>
-
-<section class="s-surf sec">
-  <div class="wrap">
     <div class="eyebrow">Почему мы</div>
     <h2 class="h2 h2-bar" style="margin-bottom:34px">Работаем на результат, а не на счётчик</h2>
     <div class="grid-why"><div class="why-card"><div class="why-n">01</div><h3 class="why-t">Подача 24/7</h3><p class="why-p">Подаём манипулятор круглосуточно, включая выходные. По Алматы — в течение часа после заявки.</p></div><div class="why-card"><div class="why-n">02</div><h3 class="why-t">Опытные операторы</h3><p class="why-p">За рычагами крановщики со стажем. Аккуратная погрузка и точная установка без повреждений.</p></div><div class="why-card"><div class="why-n">03</div><h3 class="why-t">Честные цены</h3><p class="why-p">Прозрачный расчёт: почасово или за смену, межгород — по километражу. Стоимость называем сразу.</p></div></div>
@@ -319,6 +312,9 @@ h1,h2,h3,.disp{font-family:'Oswald',sans-serif;font-weight:700;text-transform:up
   <a href="https://wa.me/77070020067?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%2C%20%D0%BD%D1%83%D0%B6%D0%B5%D0%BD%20%D0%BC%D0%B0%D0%BD%D0%B8%D0%BF%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B8%20%D0%BF%D0%BE%D0%B4%D0%B0%D1%87%D1%83." target="_blank" rel="noopener" class="fab fab-wa" aria-label="WhatsApp">
     <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.8.8.8-2.8-.2-.3A8 8 0 1112 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.6 6.6 0 01-3.2-2.8c-.2-.4.2-.4.6-1.2.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.9.9-.9 2.1-.1 3.5a11 11 0 004.3 3.8c1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1z"/></svg>
   </a>
+  <button id="goback" class="fab fab-back" aria-label="Назад">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
   <button id="gotop" class="fab fab-up" aria-label="Наверх">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
   </button>
@@ -333,6 +329,8 @@ h1,h2,h3,.disp{font-family:'Oswald',sans-serif;font-weight:700;text-transform:up
   if(b)b.addEventListener('click',op); if(c)c.addEventListener('click',cl); if(o)o.addEventListener('click',cl);
   var gt=document.getElementById('gotop');
   if(gt)gt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+  var gb=document.getElementById('goback');
+  if(gb)gb.addEventListener('click',function(){ if(history.length>1)history.back(); else location.href='index.html'; });
   function tg(){ if(!gt)return; if(window.scrollY>360){gt.style.opacity='1';gt.style.pointerEvents='auto';}else{gt.style.opacity='0';gt.style.pointerEvents='none';} }
   window.addEventListener('scroll',tg,{passive:true}); tg();
   document.querySelectorAll('.ph img,.hero-img img').forEach(function(img){
