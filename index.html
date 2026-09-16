@@ -2,12 +2,12 @@
 <html lang="ru">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18448767647"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'AW-XXXXXXXXXX');
+  gtag('config', 'AW-18448767647');
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -433,6 +433,7 @@ h1,h2,h3,.disp{font-family:'Oswald',sans-serif;font-weight:700;text-transform:up
       var n=document.getElementById('qname').value.trim(), p=document.getElementById('qphone').value.trim();
       var lines=Q.map(function(q,i){return q[0]+' '+(answers[i]||'\u2014');}).join('%0A');
       var msg='Заявка с сайта (манипулятор):%0A'+lines+'%0AИмя: '+encodeURIComponent(n||'\u2014')+'%0AТелефон: '+encodeURIComponent(p||'\u2014');
+      if(window.gtagConvSend){window.gtagConvSend();}
       window.open('https://wa.me/77070020067?text='+msg,'_blank');
     }
   };
@@ -441,5 +442,20 @@ h1,h2,h3,.disp{font-family:'Oswald',sans-serif;font-weight:700;text-transform:up
 })();
 </script>
 
+<script>
+// Google Ads — отслеживание конверсий (клик WhatsApp / телефон / отправка квиза)
+function gtag_report_conversion(url){
+  var cb=function(){ if(typeof(url)!=='undefined'){ window.location=url; } };
+  if(typeof gtag==='function'){
+    gtag('event','conversion',{'send_to':'AW-18448767647/jLWyCLz8zfkcEJ-1h91E','value':1.0,'currency':'USD','event_callback':cb});
+  } else if(typeof url!=='undefined'){ window.location=url; }
+  return false;
+}
+(function(){
+  function send(){ try{ gtag('event','conversion',{'send_to':'AW-18448767647/jLWyCLz8zfkcEJ-1h91E','value':1.0,'currency':'USD'}); }catch(e){} }
+  window.gtagConvSend=send;
+  document.querySelectorAll('a[href^="https://wa.me/"],a[href^="tel:"]').forEach(function(a){ a.addEventListener('click',send); });
+})();
+</script>
 </body>
 </html>

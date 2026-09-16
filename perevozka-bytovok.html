@@ -2,12 +2,12 @@
 <html lang="ru">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18448767647"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'AW-XXXXXXXXXX');
+  gtag('config', 'AW-18448767647');
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -342,5 +342,20 @@ h1,h2,h3,.disp{font-family:'Oswald',sans-serif;font-weight:700;text-transform:up
 })();
 </script>
 
+<script>
+// Google Ads — отслеживание конверсий (клик WhatsApp / телефон / отправка квиза)
+function gtag_report_conversion(url){
+  var cb=function(){ if(typeof(url)!=='undefined'){ window.location=url; } };
+  if(typeof gtag==='function'){
+    gtag('event','conversion',{'send_to':'AW-18448767647/jLWyCLz8zfkcEJ-1h91E','value':1.0,'currency':'USD','event_callback':cb});
+  } else if(typeof url!=='undefined'){ window.location=url; }
+  return false;
+}
+(function(){
+  function send(){ try{ gtag('event','conversion',{'send_to':'AW-18448767647/jLWyCLz8zfkcEJ-1h91E','value':1.0,'currency':'USD'}); }catch(e){} }
+  window.gtagConvSend=send;
+  document.querySelectorAll('a[href^="https://wa.me/"],a[href^="tel:"]').forEach(function(a){ a.addEventListener('click',send); });
+})();
+</script>
 </body>
 </html>
